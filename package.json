@@ -1,0 +1,21 @@
+{
+  "name": "rainbow-black",
+  "displayName": "rainbow-black",
+  "description": "Lights up your dark mode.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Rainbow Black",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Rainbow Black-color-theme.json"
+      }
+    ]
+  }
+}
