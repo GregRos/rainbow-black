@@ -1,21 +1,41 @@
 {
   "name": "rainbow-black",
   "displayName": "rainbow-black",
-  "description": "Lights up your dark mode.",
   "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.96.0"
-  },
+  "description": "Lights up your dark mode.",
   "categories": [
     "Themes"
   ],
+  "type": "module",
   "contributes": {
     "themes": [
       {
         "label": "Rainbow Black",
         "uiTheme": "vs-dark",
-        "path": "./themes/Rainbow Black-color-theme.json"
+        "path": "./themes/rainbow-black-color-theme.json"
       }
     ]
+  },
+  "dependencies": {
+    "doddle": "^5.0.0-beta.4",
+    "immutable": "^5.0.3",
+    "prettier-plugin-jsdoc": "^1.3.0",
+    "vscode-typed-theme-generator": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.4",
+    "@vscode/vsce": "^3.2.1",
+    "prettier": "^3.4.2",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "prettier-plugin-packagejson": "^2.5.6",
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "yarn@4.6.0+sha512.5383cc12567a95f1d668fbe762dfe0075c595b4bfff433be478dbbe24e05251a8e8c3eb992a986667c1d53b6c3a9c85b8398c35a960587fbd9fa3a0915406728",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "id": "rainbow-black",
+  "resolutions": {
+    "doddle": "portal:/C:/codegr/doddle"
   }
 }
