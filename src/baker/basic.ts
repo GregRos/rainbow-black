@@ -106,14 +106,15 @@ export function combineValues(values: string[]) {
         result.fontStyle = fontStyles[0].value
     }
     if (fontFlags.length === 1) {
+        6
         Object.assign(result, fontFlags[0])
     }
+    delete result.type
     return result
 }
 
-const smScopeRegexp = /^s!(\w+)/g
-const smScopeValid = /[a-z0-9.:-]+/g
-const tmScopeValid = /[a-z0-9 .-]+/g
+const smScopeRegexp = /^s!([*a-zA-Z0-9.:-]+)$/
+const tmScopeValid = /^[*a-zA-Z0-9 .-]+$/
 
 export function parseScopes(scopes: TmOrSmKey) {
     const arrified = Array.isArray(scopes) ? scopes : [scopes]
@@ -125,9 +126,7 @@ export function parseScopes(scopes: TmOrSmKey) {
             const asSm = x.match(smScopeRegexp)
             if (asSm) {
                 const [, value] = asSm
-                if (!smScopeValid.test(value)) {
-                    throw new Error(`Invalid semantic scope: ${value}`)
-                }
+
                 return { type: "sm", value }
             }
             if (!tmScopeValid.test(x)) {
@@ -144,5 +143,8 @@ export function parseScopes(scopes: TmOrSmKey) {
                 .pull()
         ])
         .pull()
-    return r as ParsedScopes
+    return {
+        tm: r.tm ?? [],
+        sm: r.sm ?? []
+    } as ParsedScopes
 }
