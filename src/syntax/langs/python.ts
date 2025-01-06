@@ -17,31 +17,3 @@ export default tmMap
             .set("s!class.decorator.builtin", "#e900d1")
             .set("s!*.typeHint", "italic")
     )
-
-/*
-,
-      "class.builtin": {
-        "bold": true,
-        "foreground": "#ffea00"
-      },
-      "class.decorator.builtin": {
-        "bold": false,
-        "foreground": "#e900d1"
-      },
-      "variable.defaultLibrary": {
-        "bold": true,
-        "foreground": "#80fb92"
-      }
-       {
-        "scope": "support.function.builtin", // python
-        "settings": {
-          "foreground": "#FB70F9"
-        }
-      },
-            {
-        "scope": "meta.scope.case-pattern", // python
-        "settings": {
-          "foreground": "#C8FF00",
-          "fontStyle": "bold"
-        }
-      },*/

@@ -1,7 +1,9 @@
 import { seq } from "doddle"
 import type { TmOrSmKey } from "../builder/type.js"
 import type { FontStyle } from "../vscode.types.js"
-
+export type A = {
+    a: "a"
+}
 export type ParsedColor = {
     type: "color"
     value: string
@@ -18,16 +20,6 @@ export type ParsedFontFlags = {
     italic?: boolean
     underline?: boolean
     strikethrough?: boolean
-}
-
-type ParsedSmScope = {
-    type: "sm"
-    value: string
-}
-
-type ParsedTmScope = {
-    type: "tm"
-    value: string
 }
 
 export type ParsedScopes = {
@@ -48,7 +40,7 @@ function parseFontFlags(token: string): ParsedFontFlags {
         obj[fullNames[option]] = sign === "+"
         return ""
     })
-    if (Object.keys(obj).length === 0) {
+    if (Object.keys(obj).length === 1) {
         return undefined
     }
     return obj
@@ -64,7 +56,10 @@ function parseValue(
     if (fontFlags !== undefined) {
         return fontFlags
     }
-    const names = token.split(" ").map(x => x.trim())
+    const names = token
+        .split(" ")
+        .map(x => x.trim())
+        .filter(x => x.length > 0)
     for (const name of names) {
         if (!fontStyleNames.has(name)) {
             throw new Error(`Invalid font style: ${name}`)
@@ -106,7 +101,6 @@ export function combineValues(values: string[]) {
         result.fontStyle = fontStyles[0].value
     }
     if (fontFlags.length === 1) {
-        6
         Object.assign(result, fontFlags[0])
     }
     delete result.type
@@ -114,7 +108,7 @@ export function combineValues(values: string[]) {
 }
 
 const smScopeRegexp = /^s!([*a-zA-Z0-9.:-]+)$/
-const tmScopeValid = /^[*a-zA-Z0-9 .-]+$/
+const tmScopeValid = /^[*a-zA-Z0-9 .>+-]+$/
 
 export function parseScopes(scopes: TmOrSmKey) {
     const arrified = Array.isArray(scopes) ? scopes : [scopes]

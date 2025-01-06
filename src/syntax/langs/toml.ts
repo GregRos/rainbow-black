@@ -1,10 +1,11 @@
 import { smMap, tmMap } from "../../builder/type.js"
+import * as c from "../../colors.js"
 
 export default tmMap
-    .set("support.type.property-name.toml", "#ECECA1")
+    .set("support.type.property-name.toml", [c.property_1])
     .set(
         ["support.type.property-name.array.toml"],
-        ["#A8FDBC", "bold underline"]
+        [c.strong_object, "bold underline"]
     )
-    .set("support.type.property-name.table.toml", ["#57CD5D", "bold"])
-    .merge(smMap.set("s!tomlArrayKey", ["#7d71f9", "-b-u"]))
+    .set("support.type.property-name.table.toml", [c.medium_object, "bold"])
+    .merge(smMap.set("s!tomlArrayKey", "-b-u"))

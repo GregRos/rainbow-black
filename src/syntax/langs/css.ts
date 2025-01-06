@@ -1,48 +1,84 @@
 import { tmMap } from "../../builder/type.js"
-
+import * as c from "../../colors.js"
 export default tmMap
     .set("meta.definition.variable.scss", "")
-    .set("entity.other.attribute-name", "#FFFFFF")
-    .set("entity.other.attribute-name.class", ["#81F897", "bold"])
+    .set("keyword.operator.css", c.op_css)
+    .set("entity.other.attribute-name", c.property_1)
+    .set("entity.other.attribute-name.class", [
+        c.strong_object,
+        "bold underline"
+    ])
     .set(
         "entity.other.attribute-name.parent-selector-suffix punctuation.definition.entity",
-        ["#81F897", "italic bold"]
+        [c.strong_object, "italic bold underline"]
     )
-    .set("entity.other.attribute-name.pseudo-class.css", ["#F0FB50", "bold"])
-    .set("entity.other.attribute-name.pseudo-element.css", ["#ED75DF", "bold"])
-    .set("meta.property-name.media-query.scss", "#FFFFFF")
-    .set("meta.attribute-selector entity.other.attribute-name", ["#707CFC", ""])
-    .set("meta.attribute-selector.scss", "#88A7B3")
-    .set("constant.numeric.css", "#e0e0e0")
-    .set("support.type.property-name", "#E94F3E")
-    .set("support.type.vendored.property-name", ["#E94F3E", "italic"])
-    .set("support.constant.property-value.css", "#8171FB")
-    .set("entity.other.attribute-name.placeholder", ["#a49dff", "underline"])
-    .set("meta.at-rule.extend entity.other.attribute-name.placeholder", "")
-    .set("support.function.misc", "#f4bc69")
-    .set("meta.at-rule.function support.function.misc", [
-        "#f4bc69",
+    .set("entity.other.attribute-name.pseudo-class.css", [
+        c.alt_object,
+        "bold underline"
+    ])
+    .set("entity.other.attribute-name.pseudo-element.css", [
+        c.medium_object,
+        "bold underline"
+    ])
+    .set("meta.property-name.media-query.scss", c.variable)
+
+    .set("constant.numeric.css", c.light_text)
+    .set("support.type.property-name", c.main_active)
+    .set("support.type.vendored.property-name", [c.active_1, "italic"])
+    .set("support.constant.property-value.css", c.keyword_1)
+    .set("entity.other.attribute-name.placeholder", [
+        c.special_object,
         "underline"
     ])
+    .set("meta.at-rule.extend entity.other.attribute-name.placeholder", "")
+    .set("support.function.misc", c.active_alt)
+    .set("meta.at-rule.function support.function.misc", "underline")
     .set("variable.interpolation.scss variable.scss", "")
-    .set("meta.at-rule.mixin entity.name.function", ["#FB7EC5", "underline"])
-    .set("keyword.other.unit.em", "#8FFA24")
-    .set("keyword.other.unit.percentage", "#f838e4")
-    .set("keyword.other.unit.vw", "#00ffae")
-    .set("keyword.other.unit.vh", "#00ffae")
-    .set("keyword.other.unit.px", "#FBFF00")
-    .set("keyword.other.unit.rem", "#FBFF00")
-    .set("meta.at-rule.include.scss entity.name.function", ["#FB7EC5", ""])
-    .set("keyword.control.at-rule.include", ["#619afc", "bold"])
+    .set("meta.at-rule.mixin entity.name.function", [
+        c.active_magic,
+        "underline"
+    ])
+    .set(
+        [
+            "keyword.other.unit.percentage",
+            "keyword.other.unit.fr",
+            "keyword.other.unit.ch",
+            "keyword.other.unit.ex",
+            "keyword.other.unit.cap"
+        ],
+        c.flex_unit_1
+    )
+    .set(
+        [
+            "keyword.other.unit.vw",
+            "keyword.other.unit.vmin",
+            "keyword.other.unit.vmax",
+            "keyword.other.unit.vh"
+        ],
+        c.magic_unit_1
+    )
+    .set(["keyword.other.unit.rem", "keyword.other.unit.em"], c.hard_unit_2)
+    .set("keyword.other.unit.px", c.hard_unit_1)
+    .set(["meta.at-rule.include entity.name.function"], [c.active_magic, ""])
+    .set(
+        ["keyword.control.at-rule.include", "keyword.control.at-rule.extend"],
+        [c.active_magic, "bold"]
+    )
     .set("meta.property-value.scss variable.scss", "")
-    .set("entity.name.tag.reference.scss", ["#FF00E1", "bold"])
-    .set("keyword.other.unit", "#FFFFFF")
-    .set("entity.name.tag.css", ["#ED831A", "bold"])
-    .set("keyword.operator.scss", "#FFFFFF")
-    .set("keyword.operator.css", "#FFFFFF")
-    .set("meta.definition.variable.map.scss", "#FBBEEE")
-    .set("meta.property-list.scss variable.scss", ["#FFFFFF", ""])
+    .set("entity.name.tag.reference.scss", [c.active_magic, "bold underline"])
+    .set("keyword.other.unit", c.magic_unit_2)
+    .set("entity.name.tag.css", [c.weak_object, "bold underline"])
+    .set("meta.definition.variable.map.scss", c.active_magic)
+    .set("meta.property-list.scss variable.scss", [c.variable, ""])
     .set("meta.property-value.scss variable.scss", "")
-    .set("meta.definition.variable", "#FFFFFF")
-    .set("keyword.other.important", ["#FF0000", "italic"])
+    .set("meta.definition.variable", c.variable)
+    .set("keyword.other.important", [c.interjection, "italic"])
     .set("meta.definition.variable.scss", "")
+    .set("support.type.property-name.media", c.property_1)
+    .set("punctuation.terminator.rule", [c.special_1])
+    .set("keyword.control.content.scss", [c.active_magic, "bold"])
+    .set(
+        ["constant.other.color.rgb-value", "support.constant.color"],
+        [c.color_value]
+    )
+    .set("punctuation.section.property-list.begin.bracket.curly", "bold")

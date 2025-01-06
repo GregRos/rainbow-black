@@ -8,10 +8,10 @@ const theme = {
     type: "dark",
     colors: workbench,
     tokenColors: baked.tm,
-    semanticTokenColors: baked.sm,
-    semanticHighlighting: true
+    semanticTokenColors: baked.sm
 }
 writeFileSync(
     "themes/rainbow-black-color-theme.json",
     JSON.stringify(theme, null, 4)
 )
+await new Promise(resolve => setTimeout(resolve, 10000000))

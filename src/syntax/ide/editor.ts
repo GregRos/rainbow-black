@@ -24,23 +24,3 @@ export default tmMap
         "#8B949E"
     )
     .set("brackethighlighter.unmatched", "#FFA198")
-
-/*      {
-        "scope": [
-          "brackethighlighter.tag",
-          "brackethighlighter.curly",
-          "brackethighlighter.round",
-          "brackethighlighter.square",
-          "brackethighlighter.angle",
-          "brackethighlighter.quote"
-        ],
-        "settings": {
-          "foreground": "#8B949E"
-        }
-      },
-      {
-        "scope": "brackethighlighter.unmatched",
-        "settings": {
-          "foreground": "#FFA198"
-        }
-      },*/
