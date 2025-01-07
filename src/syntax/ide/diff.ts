@@ -18,3 +18,11 @@ export default tmMap
         ["#FFA657", , "#5A1E02"]
     )
     .set(["markup.ignored", "markup.untracked"], ["#161B22", , "#79C0FF"])
+    .set(
+        [
+            "markup.deleted",
+            "meta.diff.header.from-file",
+            "punctuation.definition.deleted"
+        ],
+        ["#FFA198", , "#490202"]
+    )

@@ -108,7 +108,7 @@ export function combineValues(values: string[]) {
 }
 
 const smScopeRegexp = /^s!([*a-zA-Z0-9.:-]+)$/
-const tmScopeValid = /^[*a-zA-Z0-9 .>+-]+$/
+const tmScopeValid = /^[*a-zA-Z0-9_ .>+-]+$/
 
 export function parseScopes(scopes: TmOrSmKey) {
     const arrified = Array.isArray(scopes) ? scopes : [scopes]

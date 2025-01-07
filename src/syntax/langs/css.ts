@@ -23,15 +23,15 @@ export default tmMap
     .set("meta.property-name.media-query.scss", c.variable)
 
     .set("constant.numeric.css", c.light_text)
-    .set("support.type.property-name", c.main_active)
-    .set("support.type.vendored.property-name", [c.active_1, "italic"])
+    .set("support.type.property-name.css", c.main_active)
+    .set("support.type.vendored.property-name.css", [c.active_1, "italic"])
     .set("support.constant.property-value.css", c.keyword_1)
     .set("entity.other.attribute-name.placeholder", [
         c.special_object,
         "underline"
     ])
     .set("meta.at-rule.extend entity.other.attribute-name.placeholder", "")
-    .set("support.function.misc", c.active_alt)
+    .set("support.function.misc.css", c.active_alt)
     .set("meta.at-rule.function support.function.misc", "underline")
     .set("variable.interpolation.scss variable.scss", "")
     .set("meta.at-rule.mixin entity.name.function", [

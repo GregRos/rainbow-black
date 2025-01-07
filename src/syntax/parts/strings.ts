@@ -1,16 +1,18 @@
 import { tmMap } from "../../builder/type.js"
 import * as c from "../../colors.js"
 export default tmMap
-    .set("punctuation.section.embedded", "#FF7B72")
+    .set("punctuation.section.embedded", c.string_special_token)
     .set("string", c.string_1)
-    .set("string punctuation.section.embedded source", "#A5D6FF")
+    .set("string punctuation.section.embedded source", c.string_special_token)
+
     .set(
         [
             "meta.type.annotation > string.quoted",
             "meta.type.annotation > string.quoted punctuation.definition.string"
         ],
-        "#FF7B72"
+        [c.string_1, "bold"]
     )
+    .set("meta.type.annotation > constant.numeric", [c.light_text, "bold"])
     .set(
         [
             "meta.field.declaration > string.quoted",
@@ -23,4 +25,5 @@ export default tmMap
         ["meta.object-literal.key", "meta.object-literal.key"],
         [c.property_1, "underline"]
     )
-    .set("punctuation.separator.key-value", ["#FF7B72", ""])
+    .set("punctuation.separator.key-value", [c.active_1, ""])
+    .set("constant.character.escape", c.string_special_token)

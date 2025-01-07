@@ -6,9 +6,12 @@ export default tmMap
         c.property_1
     )
     .set("punctuation.curlybrace.open", "bold")
-    .set("source variable.parameter", ["#FFFFFF", "italic"])
-    .set("variable.parameter.function-call", ["#C8CFFF", "italic"])
-    .set("variable.parameter.function", [c.variable, "underline"])
+    .set("source variable.parameter", [c.variable, "underline"])
+    .set("variable.parameter.function-call", ["#C8CFFF"])
+    .set("meta.parameters > variable.parameter.function", [
+        c.variable,
+        "underline"
+    ])
     .set("meta.definition.variable", "underline")
     .set("meta.definition.variable support.constant", "#FBBEEE")
     .set("variable", c.variable)
@@ -22,12 +25,12 @@ export default tmMap
     .set("variable.other.property", c.property_1)
     .set(
         ["variable.language.this", "variable.language.special.self"],
-        [c.self, "italic"]
+        [c.self, ""]
     )
-    .set("variable.parameter.function.language.special.self", [
-        c.self,
-        "italic underline"
-    ])
+    .set(
+        "meta.function.parameters > variable.parameter.function.language.special.self",
+        [c.self, "underline"]
+    )
 
     .set(["entity.name.function", "meta.function-call.generic"], c.active_2)
     .set(["entity.name.function.tagged-template"], [c.active_1, "italic"])
@@ -40,8 +43,12 @@ export default tmMap
     )
     .merge(
         smMap
-            .set("s!parameter", ["#FFFFFF", "-b+i"])
-            .set("s!parameter.declaration", "+u")
+            .set("s!parameter", [c.variable])
+            .set("s!parameter.declaration", "underline")
             .set("s!variable.readonly", "-b")
-            .set("s!function", "#d63c3c")
+            .set("s!function", c.active_2)
+            .set("s!method.defaultLibrary", [c.active_magic])
+            .set("s!property.defaultLibrary", [c.property_magic])
+            .set("s!variable.defaultLibrary", [c.namespace, "+b"])
+            .set("s!function.local", [c.active_1, "+i"])
     )

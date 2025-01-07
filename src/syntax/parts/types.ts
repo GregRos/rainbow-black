@@ -4,23 +4,31 @@ export default tmMap
     .set("meta.type.parameters storage.modifier", c.keyword_1)
     .set("meta.type.declaration entity.name", "underline")
     .set("meta.class.inheritance", "italic bold")
-    .set("entity.other.inherited-class", c.type_arg)
-    .set("keyword.type", c.keyword_2)
-    .set("support.type", c.keyword_2)
+    .set("entity.other.inherited-class", [c.type_arg, "bold"])
+    .set("keyword.type", [c.keyword_2, "bold"])
+    .set("storage.type", [c.keyword_1])
+    .set("meta.function.decorator support.type", [c.active_magic, "bold"])
+    .set("support.type", [c.alt_object, "bold"])
+    .set(
+        ["support.type.builtin", "support.type.primitive"],
+        [c.alt_object, "bold"]
+    )
     .set("support.type.exception", [c.strong_object, "bold"])
     .set("entity.name.type", [c.type_arg, "bold"])
-    .set("variable.other.object.property", c.property_1)
+    .set(
+        ["variable.other.object.property", "support.variable.property"],
+        c.property_1
+    )
 
     .set(
         [
-            "entity.name.type.class",
-            "entity.name.type.interface",
-            "entity.name.type.enum",
-            "entity.name.type.namespace",
-            "entity.name.type.alias",
+            "meta.class > entity.name.type.class",
+            "meta.interface > entity.name.type.interface",
+            "meta.enum > entity.name.type.enum",
+            "meta.namespace > entity.name.type.namespace",
+            "meta.type.declaration > meta.entity.name.type.alias",
             "entity.name.type.struct",
             "entity.name.type.delegate",
-            "entity.name.type.module",
             "entity.name.type.type-parameter"
         ],
         "bold underline"
@@ -43,17 +51,15 @@ export default tmMap
     )
     .merge(
         smMap
-            .set("s!method", "#D63C3C")
-            .set("s!method.declaration", "+u")
-            .set("s!type", ["#00D9FF", "+b"])
+            .set("s!method", c.active_2)
+            .set("s!type", [c.weak_object, "+b"])
             .set("s!*.declaration", "+u")
             .set("s!typeParameter", ["#FF8000", "+b+i"])
-            .set("s!property", "#7CF86F")
-            .set("s!interface", ["#90ABFF", "+b"])
-            .set("s!function.decorator", ["#e900d1", "-b"])
-            .set("s!function.builtin", "#C96043")
+            .set("s!property", c.property_1)
+            .set("s!interface", [c.medium_object, "+b"])
+            .set("s!function.decorator", [c.active_magic, "-b"])
+            .set("s!function.builtin", c.active_magic)
             .set("s!enum", ["#83DEC2", "+b"])
-            .set("s!class.declaration", "+u")
-            .set("s!class", ["#54E050", "+b"])
+            .set("s!class", [c.strong_object, "bold"])
             .set("s!struct", ["#54E050", "+b"])
     )

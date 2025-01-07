@@ -1,8 +1,8 @@
 import { smMap, tmMap } from "../../builder/type.js"
-
+import * as c from "../../colors.js"
 export default tmMap
-    .set(["variable.other.readwrite.alias", "meta.import variable"], "#9DFF00")
-    .set(["meta.import string.quoted"], ["#8F3685", "underline"])
+    .set(["variable.other.readwrite.alias", "meta.import variable"], c.imported)
+    .set(["meta.import string.quoted"], [c.package_name, "underline"])
     .set(["meta.brace"], "bold")
-    .set(["meta.module-reference"], "#79C0FF")
-    .merge(smMap.set("s!module", "+b").set("s!namespace", ["#52f0ac", "+b"]))
+    .set(["meta.module-reference"], c.moduleReference)
+    .merge(smMap.set("s!module", "+b").set("s!namespace", [c.namespace, "+b"]))

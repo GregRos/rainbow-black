@@ -1,5 +1,5 @@
 import { tmMap } from "../../builder/type.js"
-
+import * as c from "../../colors.js"
 export default tmMap
-    .set("storage.type.class.jsdoc", ["#729C68", "bold"])
-    .set("variable.other.jsdoc", "#B4E3A9")
+    .set("storage.type.class.jsdoc", [c.comment_meta_type, "bold"])
+    .set("variable.other.jsdoc", c.comment_meta_var)

@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "$schema": "vscode://schemas/tasks",
+  "tasks": [
+    {
+      "label": "Watch create.ts",
+      "type": "shell",
+      "command": "tsx",
+      "args": ["--watch", "src/create.ts"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}

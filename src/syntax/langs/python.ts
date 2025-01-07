@@ -1,19 +1,19 @@
 import { smMap, tmMap } from "../../builder/type.js"
+import * as c from "../../colors.js"
 export default tmMap
-    .set("support.function.builtin", "#FB70F9")
-    .set("meta.scope.case-pattern", ["#C8FF00", "bold"])
+    .set("support.function.builtin", c.active_alt)
+    .set("punctuation.separator.annotation.python", [c.type_arg, "bold"])
     .merge(
         smMap
             .set(
                 ["s!magicFunction.builtin", "s!magicFunction.declaration"],
-                "#c562ff"
+                c.active_magic
             )
-            .set("s!selfParameter", "#9ce5ff")
+            .set("s!selfParameter", [c.self])
+            .set("s!*.typeHint", "+i")
             .set("s!property.declaration:python", "+u")
-            .set("s!variable.typeHint", ["#ff8000", "+b"])
-            .set("s!function.defaultLibrary", "#f66595")
-            .set("s!variable.defaultLibrary", ["#80fb92", "+b"])
-            .set("s!class.builtin", ["#ffea00", "+b"])
-            .set("s!class.decorator.builtin", "#e900d1")
-            .set("s!*.typeHint", "italic")
+            .set("s!*.typeHint", "+i")
+            .set("s!builtinConstant.typeHint", "+b+i")
+            .set("s!class.builtin", [c.alt_object, "+b"])
+            .set("s!class.decorator.builtin", c.special_2)
     )

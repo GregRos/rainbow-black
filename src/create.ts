@@ -8,7 +8,8 @@ const theme = {
     type: "dark",
     colors: workbench,
     tokenColors: baked.tm,
-    semanticTokenColors: baked.sm
+    semanticTokenColors: baked.sm,
+    semanticHighlighting: true
 }
 writeFileSync(
     "themes/rainbow-black-color-theme.json",
