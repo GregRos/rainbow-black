@@ -15,6 +15,12 @@
       "runOptions": {
         "runOn": "folderOpen"
       }
+    },
+    {
+      "label": "vsce package",
+      "type": "shell",
+      "command": "yarn run vsce package",
+      "problemMatcher": []
     }
   ]
 }
