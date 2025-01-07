@@ -1,5 +1,5 @@
 import { smMap, tmMap } from "../../baker/parts.js"
-import * as c from "../../colors.js"
+import * as c from "../colors.js"
 export default tmMap
     .set("support.function.builtin", c.active_alt)
     .set("punctuation.separator.annotation.python", [c.type_arg, "bold"])

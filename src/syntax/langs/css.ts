@@ -1,5 +1,5 @@
 import { tmMap } from "../../baker/parts.js"
-import * as c from "../../colors.js"
+import * as c from "../colors.js"
 export default tmMap
     .set("meta.definition.variable.scss", "")
     .set("keyword.operator.css", c.op_css)

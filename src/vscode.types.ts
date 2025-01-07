@@ -1,29 +1,7 @@
-export type FontStyle =
-    | ""
-    | "italic"
-    | "bold"
-    | "underline"
-    | "strikethrough"
-    | "italic bold"
-    | "italic underline"
-    | "italic strikethrough"
-    | "bold underline"
-    | "bold strikethrough"
-    | "underline strikethrough"
-    | "italic bold underline"
-    | "italic bold strikethrough"
-    | "italic underline strikethrough"
-    | "bold underline strikethrough"
-    | "italic bold underline strikethrough"
+import { TokenColorSetting } from "vscode-typed-theme-generator"
+export type FontStyle = TokenColorSetting["fontStyle"]
 /** Colors and styles for the token. */
-export interface TmSettings {
-    /**
-     * Font style of the rule: 'italic', 'bold', 'underline', 'strikethrough' or
-     * a combination. The empty string unsets inherited settings.
-     */
-    fontStyle?: FontStyle
-    /** Foreground color for the token. */
-    foreground?: string
+export interface TmSettings extends TokenColorSetting {
     background?: string
 }
 /** Colors for syntax highlighting */

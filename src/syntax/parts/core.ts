@@ -1,5 +1,5 @@
 import { smMap, tmMap } from "../../baker/parts.js"
-import * as c from "../../colors.js"
+import * as c from "../colors.js"
 export default tmMap
     .set("comment", [c.comment, "italic"])
     .set("constant.numeric", c.light_text)

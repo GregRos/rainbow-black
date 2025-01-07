@@ -1,5 +1,5 @@
 import { tmMap, type TmKey, type TmValue } from "../../baker/parts.js"
-import * as c from "../../colors.js"
+import * as c from "../colors.js"
 
 const headingNumberToStyle = {
     1: c.active_magic,
