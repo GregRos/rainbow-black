@@ -3,10 +3,10 @@
   "$schema": "vscode://schemas/tasks",
   "tasks": [
     {
-      "label": "Watch create.ts",
+      "label": "Generate +watch",
       "type": "shell",
       "command": "tsx",
-      "args": ["--watch", "src/create.ts"],
+      "args": ["--watch", "${workspaceFolder}/src/generate.ts"],
       "group": {
         "kind": "build",
         "isDefault": true
@@ -17,7 +17,7 @@
       }
     },
     {
-      "label": "vsce package",
+      "label": "Package (@vsce)",
       "type": "shell",
       "command": "yarn run vsce package",
       "problemMatcher": []

@@ -17,5 +17,32 @@ export default tmMap
         ],
         c.active_1
     )
-    .set(["keyword.control.flow", "keyword.control.trycatch"], c.keyword_3)
-    .merge(smMap.set(["s!variable:typecript", "s!variable:javascript"], "+b"))
+    .set(
+        [
+            "keyword.control.flow",
+            "keyword.control.trycatch",
+            "keyword.control.loop"
+        ],
+        c.keyword_3
+    )
+    .set("meta.object-literal.key > constant.numeric", [c.property_typish])
+    .set(
+        [
+            "meta.object-literal.key > string.quoted",
+            "meta.object-literal.key > punctuation.definition.string"
+        ],
+        [c.property_typish, "underline"]
+    )
+    .set("meta.method.declaration.ts > storage.type.ts", [
+        c.active_magic,
+        "underline"
+    ])
+    .set("meta.type.parameters > keyword.operator.assignment", [
+        c.active_1,
+        "bold"
+    ])
+    .merge(
+        smMap
+            .set(["s!variable:typecript", "s!variable:javascript"], "+b")
+            .set("s!typeParameter:typescript", [c.type_arg, "+i"])
+    )

@@ -8,15 +8,15 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Build Theme",
+      "name": "Generate Theme",
       "runtimeExecutable": "tsx",
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/src/create.ts"
+      "program": "${workspaceFolder}/src/generate.ts"
     },
     {
-      "name": "Extension",
+      "name": "vscode (+theme)",
       "type": "extensionHost",
       "request": "launch",
       "args": ["--extensionDevelopmentPath=${workspaceFolder}"]

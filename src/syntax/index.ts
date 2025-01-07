@@ -15,6 +15,7 @@ import toml from "./langs/toml.js"
 import yaml from "./langs/yaml.js"
 
 import core from "./parts/core.js"
+import functions from "./parts/functions.js"
 import modules from "./parts/modules.js"
 import regexp from "./parts/regexp.js"
 import strings from "./parts/strings.js"
@@ -23,6 +24,7 @@ import variables from "./parts/variables.js"
 export default diff.merge(
     editor,
     jsdoc,
+    functions,
     csharp,
     fsharp,
     css,

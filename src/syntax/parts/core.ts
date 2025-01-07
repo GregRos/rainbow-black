@@ -18,4 +18,8 @@ export default tmMap
         ],
         c.keyword_1
     )
+    .set(
+        ["punctuation.separator.comma", "storage.type.function.arrow"],
+        [c.punctuation, ""]
+    )
     .merge(smMap.set(["s!builtinConstant"], c.keyword_3))
