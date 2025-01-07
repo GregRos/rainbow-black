@@ -1,5 +1,5 @@
-import type { TmOrSmMap } from "../builder/type.js"
 import { combineValues, parseScopes } from "./basic.js"
+import type { TmOrSmMap } from "./parts.js"
 
 export default function bake(mp: TmOrSmMap) {
     const tmScopeList = [] as any[]

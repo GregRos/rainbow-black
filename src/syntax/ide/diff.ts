@@ -1,4 +1,4 @@
-import { tmMap } from "../../builder/type.js"
+import { tmMap } from "../../baker/parts.js"
 
 export default tmMap
     .set("meta.diff.range", ["#D2A8FF", "bold"])

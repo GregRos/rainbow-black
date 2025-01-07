@@ -1,4 +1,4 @@
-import { tmMap, type TmKey, type TmValue } from "../../builder/type.js"
+import { tmMap, type TmKey, type TmValue } from "../../baker/parts.js"
 import * as c from "../../colors.js"
 
 const headingNumberToStyle = {

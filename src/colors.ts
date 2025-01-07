@@ -43,7 +43,7 @@ export const interjection = "#FF0000"
 
 export const self = special_1
 
-export const package_name = "#DB54CB"
+export const package_name = "#804A7A"
 export const imported = "#9DFF00"
 export const moduleReference = "#79C0FF"
 export const comment = "#536E5E"

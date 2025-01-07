@@ -1,4 +1,4 @@
-import { tmMap } from "../../builder/type.js"
+import { tmMap } from "../../baker/parts.js"
 import * as c from "../../colors.js"
 export default tmMap
     .set("keyword.control.preamble.latex", [c.keyword_1, "bold underline"])

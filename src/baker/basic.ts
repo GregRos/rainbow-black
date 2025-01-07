@@ -1,6 +1,6 @@
 import { seq } from "doddle"
-import type { TmOrSmKey } from "../builder/type.js"
 import type { FontStyle } from "../vscode.types.js"
+import type { TmOrSmKey } from "./parts.js"
 export type A = {
     a: "a"
 }

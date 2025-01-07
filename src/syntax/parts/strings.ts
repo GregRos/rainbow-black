@@ -1,4 +1,4 @@
-import { tmMap } from "../../builder/type.js"
+import { tmMap } from "../../baker/parts.js"
 import * as c from "../../colors.js"
 export default tmMap
     .set("punctuation.section.embedded", c.string_special_token)
