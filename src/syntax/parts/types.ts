@@ -7,7 +7,6 @@ export default tmMap
     .set("keyword.type", [c.keyword_2, "bold"])
     .set("storage.type", [c.keyword_1])
     .set("meta.function.decorator support.type", [c.active_magic, "bold"])
-    .set("support.type", [c.alt_object, "bold"])
     .set(["support.type.builtin", "support.type.primitive"], [c.keyword_2, ""])
     .set("support.type.exception", [c.strong_object, "bold"])
     .set("entity.name.type", [c.type_arg, "bold"])

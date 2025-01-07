@@ -4,13 +4,27 @@ export default tmMap
     .set("meta.definition.variable.scss", "")
     .set("keyword.operator.css", c.op_css)
     .set("entity.other.attribute-name", c.property_1)
-    .set("entity.other.attribute-name.class", [
-        c.strong_object,
-        "bold underline"
-    ])
     .set(
-        "entity.other.attribute-name.parent-selector-suffix punctuation.definition.entity",
-        [c.strong_object, "italic bold underline"]
+        [
+            "entity.other.attribute-name.class",
+            "entity.other.attribute-name.class punctuation.definition.entity"
+        ],
+        [c.medium_object, "bold underline"]
+    )
+    .set(
+        [
+            "entity.other.attribute-name.id",
+            "entity.other.attribute-name.id punctuation.definition.entity"
+        ],
+        [c.strong_object, "bold underline"]
+    )
+    .set("support.function.misc.scss", c.keyword_4)
+    .set("entity.name.tag.reference.scss", [c.alt_object, "bold underline"])
+    .set(
+        [
+            "entity.other.attribute-name.parent-selector-suffix punctuation.definition.entity"
+        ],
+        [c.alt_object, "italic bold underline"]
     )
     .set("entity.other.attribute-name.pseudo-class.css", [
         c.alt_object,
@@ -65,7 +79,6 @@ export default tmMap
         [c.active_magic, "bold"]
     )
     .set("meta.property-value.scss variable.scss", "")
-    .set("entity.name.tag.reference.scss", [c.active_magic, "bold underline"])
     .set("keyword.other.unit", c.magic_unit_2)
     .set("entity.name.tag.css", [c.weak_object, "bold underline"])
     .set("meta.definition.variable.map.scss", c.active_magic)

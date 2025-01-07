@@ -1,7 +1,7 @@
 import { tmMap } from "../../baker/parts.js"
 import * as c from "../colors.js"
 export default tmMap
-    .set("punctuation.section.embedded", c.string_special_token)
+    .set("punctuation.section.embedded", [c.string_special_token, "bold"])
     .set("string", c.string_1)
     .set("string punctuation.section.embedded source", c.string_special_token)
 

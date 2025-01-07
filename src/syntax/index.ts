@@ -9,11 +9,11 @@ import jsdoc from "./langs/jsdoc.js"
 import json from "./langs/json.js"
 import markdown from "./langs/markdown.js"
 import python from "./langs/python.js"
+import react from "./langs/react.js"
 import shell from "./langs/shell.js"
 import tex from "./langs/tex.js"
 import toml from "./langs/toml.js"
 import yaml from "./langs/yaml.js"
-
 import core from "./parts/core.js"
 import functions from "./parts/functions.js"
 import modules from "./parts/modules.js"
@@ -31,6 +31,7 @@ export default diff.merge(
     js,
     githubActions,
     tex,
+    react,
     markdown,
     json,
     yaml,
