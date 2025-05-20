@@ -21,37 +21,23 @@ export default tmMap
     .set("support.function.misc.scss", c.keyword_4)
     .set("entity.name.tag.reference.scss", [c.alt_object, "bold underline"])
     .set(
-        [
-            "entity.other.attribute-name.parent-selector-suffix punctuation.definition.entity"
-        ],
+        ["entity.other.attribute-name.parent-selector-suffix punctuation.definition.entity"],
         [c.alt_object, "italic bold underline"]
     )
-    .set("entity.other.attribute-name.pseudo-class.css", [
-        c.alt_object,
-        "bold underline"
-    ])
-    .set("entity.other.attribute-name.pseudo-element.css", [
-        c.medium_object,
-        "bold underline"
-    ])
-    .set("meta.property-name.media-query.scss", c.variable)
+    .set("entity.other.attribute-name.pseudo-class.css", [c.css_pseudo_class, "bold"])
+    .set("entity.other.attribute-name.pseudo-element.css", [c.css_pseudo_element, "bold"])
+    .set("meta.property-name.media-query.scss", [c.variable, "underline"])
 
     .set("constant.numeric.css", c.light_text)
     .set("support.type.property-name.css", c.main_active)
     .set("support.type.vendored.property-name.css", [c.active_1, "italic"])
     .set("support.constant.property-value.css", c.keyword_1)
-    .set("entity.other.attribute-name.placeholder", [
-        c.special_object,
-        "underline"
-    ])
+    .set("entity.other.attribute-name.placeholder", [c.special_object, "underline"])
     .set("meta.at-rule.extend entity.other.attribute-name.placeholder", "")
     .set("support.function.misc.css", c.active_alt)
     .set("meta.at-rule.function support.function.misc", "underline")
     .set("variable.interpolation.scss variable.scss", "")
-    .set("meta.at-rule.mixin entity.name.function", [
-        c.active_magic,
-        "underline"
-    ])
+    .set("meta.at-rule.mixin entity.name.function", [c.active_magic, "underline"])
     .set(
         [
             "keyword.other.unit.percentage",
@@ -83,15 +69,16 @@ export default tmMap
     .set("entity.name.tag.css", [c.weak_object, "bold underline"])
     .set("meta.definition.variable.map.scss", c.active_magic)
     .set("meta.property-list.scss variable.scss", [c.variable, ""])
-    .set("meta.property-value.scss variable.scss", "")
     .set("meta.definition.variable", c.variable)
     .set("keyword.other.important", [c.interjection, "italic"])
     .set("meta.definition.variable.scss", "")
     .set("support.type.property-name.media", c.property_1)
+    .set("meta.attribute-selector entity.other.attribute-name", c.css_attr_name)
+    .set("meta.attribute-selector.scss", c.css_attr_selector_scss)
+    .set("meta.attribute-selector.scss", c.css_attr_name)
     .set("punctuation.terminator.rule", [c.special_1])
     .set("keyword.control.content.scss", [c.active_magic, "bold"])
-    .set(
-        ["constant.other.color.rgb-value", "support.constant.color"],
-        [c.color_value]
-    )
+    .set(["constant.other.color.rgb-value", "support.constant.color"], [c.color_value])
     .set("punctuation.section.property-list.begin.bracket.curly", "bold")
+    .set("meta.at-rule.include.scss entity.name.function", [c.css_at_rule_include, ""])
+    .set("keyword.operator.scss, keyword.operator.css", c.tex_align)

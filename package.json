@@ -1,7 +1,7 @@
 {
   "name": "rainbow-black",
   "displayName": "rainbow-black",
-  "version": "0.0.4",
+  "version": "0.1.14",
   "description": "Lights up your dark mode.",
   "categories": [
     "Themes"
@@ -16,7 +16,7 @@
     "package.json"
   ],
   "scripts": {
-    "generate": "tsx ./src/create.ts",
+    "generate": "tsx ./src/generate.ts",
     "package": "vsce package --yarn"
   },
   "contributes": {
