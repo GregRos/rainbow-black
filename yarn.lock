@@ -132,6 +132,18 @@
   dependencies:
     "@types/ms" "*"
 
+"@types/lodash-es@^4.17.12":
+  version "4.17.12"
+  resolved "https://registry.yarnpkg.com/@types/lodash-es/-/lodash-es-4.17.12.tgz#65f6d1e5f80539aa7cfbfc962de5def0cf4f341b"
+  integrity sha512-0NgftHUcV4v34VhXm8QBSftKVXtbkBG3ViCjs6+eJ5a6y6Mi/jiFGPc1sC7QK+9BFhWrURE3EOggmWaSxL9OzQ==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.17.20"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.17.20.tgz#1ca77361d7363432d29f5e55950d9ec1e1c6ea93"
+  integrity sha512-H3MHACvFUEiujabxhaI/ImO6gUrd8oOurg7LQtS7mbwIXA/cUqWrvBsaeJ23aZEPk1TAYkurjfMbSELfoCXlGA==
+
 "@types/mdast@^4.0.0":
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/@types/mdast/-/mdast-4.0.4.tgz#7ccf72edd2f1aa7dd3437e180c64373585804dd6"
@@ -565,10 +577,10 @@ devlop@^1.0.0:
   dependencies:
     dequal "^2.0.0"
 
-doddle@^5.0.0-beta.4:
-  version "5.0.0-beta.4"
-  resolved "https://registry.yarnpkg.com/doddle/-/doddle-5.0.0-beta.4.tgz#5d8a8fee145589fd4c45c2b34a460ee0764eab21"
-  integrity sha512-sLyPMbChwq237GYbSDTBtVn2IwWhNnnDYwoF/ms1IyKOd5BClbn/nRWIRfAyxqDixHzp0i75PTgNsO28VhoGaQ==
+doddle@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/doddle/-/doddle-5.2.0.tgz#212f415a2ce21329f19a44891a1ff61b1cf107f4"
+  integrity sha512-sS75EURXbaxlqYBEz3PeIdRRkPwNp/VvF7I4hS02Yat+1WaoeeZoY5y9WN2bjdrTRU2MzK0Wf+Y52filu9gUXA==
 
 dom-serializer@^2.0.0:
   version "2.0.0"
@@ -963,6 +975,11 @@ linkify-it@^5.0.0:
   integrity sha512-5aHCbzQRADcdP+ATqnDuhhJ/MRIqDkZX5pyjFHRRysS8vZ5AbqGEoFIb6pYHPZ+L/OC2Lc+xT8uHVVR5CAK/wQ==
   dependencies:
     uc.micro "^2.0.0"
+
+lodash-es@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
+  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
 lodash.includes@^4.3.0:
   version "4.3.0"
