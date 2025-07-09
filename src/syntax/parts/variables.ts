@@ -1,19 +1,39 @@
 import { smMap, tmMap } from "../../baker/parts.js"
 import * as c from "../colors.js"
 export default tmMap
-    .set(["variable.object.property", "entity.name.variable.property"], c.property_1)
+    .set(
+        ["variable.object.property", "entity.name.variable.property"],
+        c.property_1
+    )
     .set("punctuation.curlybrace.open", "bold")
 
     .set("variable", c.variable)
-
+    .set("meta.object.member > meta.object-literal.key", [
+        c.property_1,
+        "underline"
+    ])
+    .set(
+        "meta.object.member > meta.object-literal.key.ts > meta.array.literal",
+        ""
+    )
+    .set("meta.definition.variable variable.other", "underline")
     .set("constant.language.boolean", [c.keyword_1])
-    .set(["constant.language.infinity", "constant.language.nan"], [c.alt_object, "italic"])
+    .set(
+        ["constant.language.infinity", "constant.language.nan"],
+        [c.alt_object, "italic"]
+    )
     .set("support.variable.magic", c.property_magic)
     .set("support.constant", "#79C0FF")
     .set("support.variable", "#79C0FF")
     .set("variable.other.property", c.property_1)
-    .set(["variable.language.this", "variable.language.special.self"], [c.self, ""])
-    .set("variable.parameter.function-call", [c.variable_function_call, "italic"])
+    .set(
+        ["variable.language.this", "variable.language.special.self"],
+        [c.self, ""]
+    )
+    .set("variable.parameter.function-call", [
+        c.variable_function_call,
+        "italic"
+    ])
 
     .merge(
         smMap

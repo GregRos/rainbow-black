@@ -10,9 +10,15 @@ export default tmMap
     .set(["support.type.builtin", "support.type.primitive"], [c.keyword_2, ""])
     .set("support.type.exception", [c.strong_object, "bold"])
     .set("entity.name.type", [c.type_arg, "bold"])
-    .set(["variable.other.object.property", "support.variable.property"], c.property_1)
+    .set(
+        ["variable.other.object.property", "support.variable.property"],
+        c.property_1
+    )
     .set(["keyword.operator.logical."], [c.op_css, "bold"])
-    .set(["keyword.operator.optional", "punctuation.accessor.optional"], [c.active_alt])
+    .set(
+        ["keyword.operator.optional", "punctuation.accessor.optional"],
+        [c.active_alt]
+    )
     .set("keyword.operator.type.ts", [c.keyword_4, "bold"])
     .set("keyword.operator.type.annotation", [c.type_arg])
     .set(
@@ -22,6 +28,7 @@ export default tmMap
             "meta.enum > entity.name.type.enum",
             "meta.namespace > entity.name.type.namespace",
             "meta.type.declaration > meta.entity.name.type.alias",
+            "meta.type.declaration > entity.name.type.alias",
             "entity.name.type.delegate",
             "entity.name.type.type-parameter"
         ],
@@ -56,4 +63,5 @@ export default tmMap
             .set("s!enum", ["#83DEC2", "+b"])
             .set("s!class", [c.strong_object, "bold"])
             .set("s!struct", ["#54E050", "+b"])
+            .set("s!type:typescript", [c.weak_object, "+b"])
     )
